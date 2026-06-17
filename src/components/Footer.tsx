@@ -8,7 +8,7 @@ export const Footer = () => {
     { icon: Instagram, href: '#', label: 'Instagram' },
     { icon: Facebook, href: '#', label: 'Facebook' },
     { icon: Linkedin, href: '#', label: 'LinkedIn' },
-    { icon: Mail, href: 'mailto:hello@example.com', label: 'Email' }
+    { icon: Mail, href: 'mailto:hello@example.com', label: 'Email' },
   ];
 
   return (
@@ -27,9 +27,7 @@ export const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-sm font-semibold tracking-widest uppercase mb-4">
-              Navigation
-            </h4>
+            <h4 className="text-sm font-semibold tracking-widest uppercase mb-4">Navigation</h4>
             <nav className="flex flex-col space-y-2">
               {['Home', 'About', 'Work', 'Contact'].map((link) => (
                 <a
@@ -45,9 +43,7 @@ export const Footer = () => {
 
           {/* Social */}
           <div>
-            <h4 className="text-sm font-semibold tracking-widest uppercase mb-4">
-              Connect
-            </h4>
+            <h4 className="text-sm font-semibold tracking-widest uppercase mb-4">Connect</h4>
             <div className="flex gap-4">
               {socialLinks.map((social) => (
                 <motion.a

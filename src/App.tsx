@@ -47,14 +47,14 @@ function App() {
         <ScrollProgress />
         <Navigation />
         <BackToTop />
-        
+
         <main>
           <Hero />
           <About />
           <Gallery />
           <Contact />
         </main>
-        
+
         <Footer />
       </div>
     </>

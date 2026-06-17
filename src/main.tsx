@@ -1,11 +1,11 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.tsx'
-import './styles/globals.css'
-import { HelmetProvider } from 'react-helmet-async'
-import { ThemeProvider } from './hooks/ThemeContext'
-import { preloadImages } from './utils/preload'
-import { projects } from './sections/Gallery'
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App.tsx';
+import './styles/globals.css';
+import { HelmetProvider } from 'react-helmet-async';
+import { ThemeProvider } from './hooks/ThemeContext';
+import { preloadImages } from './utils/preload';
+import { projects } from './sections/Gallery';
 
 // Preload critical assets (fonts/images) for better perceived performance
 const criticalImages = [
@@ -20,9 +20,11 @@ if (typeof document !== 'undefined' && 'fonts' in document) {
   try {
     // `document.fonts.ready` resolves when fonts declared via @import or @font-face are loaded
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    (document as any).fonts.ready.then(() => {
-      document.documentElement.classList.add('fonts-loaded');
-    }).catch(() => {});
+    (document as any).fonts.ready
+      .then(() => {
+        document.documentElement.classList.add('fonts-loaded');
+      })
+      .catch(() => {});
   } catch {
     // ignore
   }
@@ -36,4 +38,4 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
       </ThemeProvider>
     </HelmetProvider>
   </React.StrictMode>,
-)
+);

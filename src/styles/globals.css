@@ -8,19 +8,19 @@
   html.lenis {
     height: auto;
   }
-  
+
   .lenis.lenis-smooth {
     scroll-behavior: auto !important;
   }
-  
+
   .lenis.lenis-smooth [data-lenis-prevent] {
     overscroll-behavior: contain;
   }
-  
+
   .lenis.lenis-stopped {
     overflow: hidden;
   }
-  
+
   .lenis.lenis-scrolling iframe {
     pointer-events: none;
   }
@@ -51,8 +51,14 @@
     font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
   }
 
-  h1, h2, h3, h4, h5, .font-display {
-    font-family: 'Syncopate', 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  .font-display {
+    font-family: 'Syncopate', 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto,
+      'Helvetica Neue', Arial;
   }
 }
 

@@ -8,11 +8,11 @@ interface AnimatedCounterProps {
   prefix?: string;
 }
 
-export const AnimatedCounter = ({ 
-  end, 
-  duration = 2, 
-  suffix = '', 
-  prefix = '' 
+export const AnimatedCounter = ({
+  end,
+  duration = 2,
+  suffix = '',
+  prefix = '',
 }: AnimatedCounterProps) => {
   const [count, setCount] = useState(0);
   const ref = useRef<HTMLSpanElement>(null);
@@ -27,10 +27,10 @@ export const AnimatedCounter = ({
     const animate = (currentTime: number) => {
       if (!startTime) startTime = currentTime;
       const progress = Math.min((currentTime - startTime) / (duration * 1000), 1);
-      
+
       const easeOutQuart = 1 - Math.pow(1 - progress, 4);
       const currentCount = Math.floor(easeOutQuart * (end - startValue) + startValue);
-      
+
       setCount(currentCount);
 
       if (progress < 1) {
@@ -51,7 +51,9 @@ export const AnimatedCounter = ({
       transition={{ duration: 0.5 }}
       className="tabular-nums"
     >
-      {prefix}{count}{suffix}
+      {prefix}
+      {count}
+      {suffix}
     </motion.span>
   );
 };

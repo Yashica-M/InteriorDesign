@@ -12,13 +12,13 @@ This guide will help you customize the portfolio to make it your own.
 const structuredData = {
   '@context': 'https://schema.org',
   '@type': 'Person',
-  name: 'Your Full Name',                    // ← Change this
-  jobTitle: 'Your Job Title',                // ← Change this
-  url: 'https://yourwebsite.com',            // ← Change this
+  name: 'Your Full Name', // ← Change this
+  jobTitle: 'Your Job Title', // ← Change this
+  url: 'https://yourwebsite.com', // ← Change this
   sameAs: [
-    'https://github.com/yourusername',       // ← Change this
-    'https://twitter.com/yourusername',      // ← Change this
-    'https://linkedin.com/in/yourusername'   // ← Change this
+    'https://github.com/yourusername', // ← Change this
+    'https://twitter.com/yourusername', // ← Change this
+    'https://linkedin.com/in/yourusername', // ← Change this
   ],
   // ... update other fields
 };
@@ -50,25 +50,18 @@ const title2 = "NAME";       // ← Change this
 
 ```typescript
 // Line 74-76: Update your bio
-<p ref={textRef}>
-  Your personal story and philosophy...  // ← Change this
-</p>
+<p ref={textRef}>Your personal story and philosophy... // ← Change this</p>;
 
 // Line 8-11: Update your skills
 const skills = [
-  "Your Skill 1",           // ← Change these
-  "Your Skill 2",
-  "Your Skill 3",
+  'Your Skill 1', // ← Change these
+  'Your Skill 2',
+  'Your Skill 3',
   // ... add more
 ];
 
 // Line 99-101: Update your experience
-<ExperienceCard 
-  role="Your Role" 
-  company="Your Company" 
-  period="2020 - present" 
-  delay={0.1} 
-/>
+<ExperienceCard role="Your Role" company="Your Company" period="2020 - present" delay={0.1} />;
 ```
 
 ### 4. Update Statistics
@@ -77,10 +70,10 @@ const skills = [
 
 ```typescript
 const stats = [
-  { value: 150, suffix: '+', label: 'Projects Completed' },  // ← Change values
+  { value: 150, suffix: '+', label: 'Projects Completed' }, // ← Change values
   { value: 50, suffix: '+', label: 'Happy Clients' },
   { value: 8, suffix: '+', label: 'Years Experience' },
-  { value: 15, suffix: '+', label: 'Awards Won' }
+  { value: 15, suffix: '+', label: 'Awards Won' },
 ];
 ```
 
@@ -92,10 +85,10 @@ const stats = [
 const projects = [
   {
     id: 1,
-    title: "Your Project Name",              // ← Change this
-    category: "Project Category",            // ← Change this
-    image: "https://your-image-url.com",     // ← Change this
-    size: "large"  // or "medium"
+    title: 'Your Project Name', // ← Change this
+    category: 'Project Category', // ← Change this
+    image: 'https://your-image-url.com', // ← Change this
+    size: 'large', // or "medium"
   },
   // ... add more projects
 ];
@@ -136,19 +129,19 @@ const projects = [
 
 ```css
 :root {
-  --background: #f5f5f5;    /* Light mode background */
-  --surface: #ffffff;       /* Light mode surface */
-  --primary: #0a0a0a;       /* Light mode text */
-  --secondary: #666666;     /* Light mode secondary text */
-  --accent: #2563eb;        /* Accent color (blue) */
+  --background: #f5f5f5; /* Light mode background */
+  --surface: #ffffff; /* Light mode surface */
+  --primary: #0a0a0a; /* Light mode text */
+  --secondary: #666666; /* Light mode secondary text */
+  --accent: #2563eb; /* Accent color (blue) */
 }
 
 .dark {
-  --background: #0a0a0a;    /* Dark mode background */
-  --surface: #121212;       /* Dark mode surface */
-  --primary: #ffffff;       /* Dark mode text */
-  --secondary: #a1a1aa;     /* Dark mode secondary text */
-  --accent: #3b82f6;        /* Dark mode accent */
+  --background: #0a0a0a; /* Dark mode background */
+  --surface: #121212; /* Dark mode surface */
+  --primary: #ffffff; /* Dark mode text */
+  --secondary: #a1a1aa; /* Dark mode secondary text */
+  --accent: #3b82f6; /* Dark mode accent */
 }
 ```
 
@@ -176,7 +169,7 @@ fontFamily: {
 
 ```typescript
 const lenis = new Lenis({
-  duration: 1.2,  // ← Scroll duration (lower = faster)
+  duration: 1.2, // ← Scroll duration (lower = faster)
   // ...
 });
 ```
@@ -190,6 +183,7 @@ const lenis = new Lenis({
    - `{{user_email}}`
    - `{{message}}`
 4. **Get your credentials**:
+
    - Service ID
    - Template ID
    - Public Key
@@ -199,10 +193,10 @@ const lenis = new Lenis({
 ```typescript
 // Line 19: Uncomment and update
 await emailjs.sendForm(
-  'YOUR_SERVICE_ID',      // ← Your Service ID
-  'YOUR_TEMPLATE_ID',     // ← Your Template ID
+  'YOUR_SERVICE_ID', // ← Your Service ID
+  'YOUR_TEMPLATE_ID', // ← Your Template ID
   formRef.current,
-  'YOUR_PUBLIC_KEY'       // ← Your Public Key
+  'YOUR_PUBLIC_KEY', // ← Your Public Key
 );
 
 // Line 22: Remove the demo timeout
@@ -214,6 +208,7 @@ await emailjs.sendForm(
 ### Favicon
 
 Replace these files in `/public`:
+
 - `favicon.ico`
 - `favicon-16x16.png`
 - `favicon-32x32.png`
@@ -226,6 +221,7 @@ Use [Favicon Generator](https://realfavicongenerator.net/) to create all sizes.
 ### Project Images
 
 Use high-quality images (recommended: 2000x1200px or larger):
+
 - Upload to a CDN (Cloudinary, Imgix, etc.)
 - Or use Unsplash URLs
 - Update URLs in `src/sections/Gallery.tsx`
@@ -233,6 +229,7 @@ Use high-quality images (recommended: 2000x1200px or larger):
 ### OG Image
 
 Create a 1200x630px image for social sharing:
+
 - Save as `/public/og-image.jpg`
 - Update in `src/components/SEO.tsx`
 
@@ -241,6 +238,7 @@ Create a 1200x630px image for social sharing:
 ### Update URLs
 
 **Files to update:**
+
 1. `src/components/SEO.tsx` - Line 16
 2. `public/robots.txt` - Line 4
 3. `public/sitemap.xml` - All `<loc>` tags
@@ -276,7 +274,7 @@ Add to `src/App.tsx`:
 import { YourSection } from './sections/YourSection';
 
 // In return:
-<YourSection />
+<YourSection />;
 ```
 
 ### Modify Particles
@@ -284,7 +282,7 @@ import { YourSection } from './sections/YourSection';
 **File:** `src/components/Particles.tsx`
 
 ```typescript
-const particleCount = 50;  // ← Number of particles (line 34)
+const particleCount = 50; // ← Number of particles (line 34)
 
 // Line 73: Change particle color
 ctx.fillStyle = `rgba(59, 130, 246, ${particle.opacity})`;
@@ -306,6 +304,7 @@ scale: isHovered ? 3 : 1,  // ← Change scale value
 ## 📱 Responsive Breakpoints
 
 Tailwind breakpoints used:
+
 - `sm:` - 640px
 - `md:` - 768px
 - `lg:` - 1024px
@@ -318,6 +317,7 @@ Adjust in components as needed.
 ### Reduce Animations
 
 If performance is slow:
+
 1. Reduce particle count (line 34 in `Particles.tsx`)
 2. Increase animation durations
 3. Disable custom cursor on mobile

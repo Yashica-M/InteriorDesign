@@ -25,6 +25,7 @@ Notes
 - Replace the placeholder URLs in `src/components/SEO.tsx`, `sitemap.xml` and `robots.txt` with your real domain.
 - Add EmailJS credentials to `src/sections/Contact.tsx` before using the contact form.
 - The design uses Lenis for smooth scroll and GSAP/Framer Motion for animations.
+
 # 🚀 Premium Portfolio Website
 
 An ultra-premium, production-ready, single-page personal portfolio website built with cutting-edge technologies and award-winning design principles.
@@ -34,6 +35,7 @@ An ultra-premium, production-ready, single-page personal portfolio website built
 ## ✨ Features
 
 ### 🎨 Design & UX
+
 - **Luxury Design System** - Apple-level polish with Awwwards-quality interactions
 - **Dark/Light Mode** - Seamless theme switching with smooth transitions
 - **Glassmorphism** - Modern glass effects and layered depth
@@ -41,6 +43,7 @@ An ultra-premium, production-ready, single-page personal portfolio website built
 - **Responsive Design** - Flawless experience across all devices
 
 ### 🎭 Advanced Animations
+
 - **GSAP ScrollTrigger** - Scroll-based storytelling and reveals
 - **Framer Motion** - Smooth, performant React animations
 - **Custom Cursor** - Interactive cursor with hover states
@@ -49,6 +52,7 @@ An ultra-premium, production-ready, single-page personal portfolio website built
 - **Parallax Effects** - Multi-layer depth and movement
 
 ### 🎯 Premium Features
+
 - **Smooth Scrolling** - Lenis smooth scroll implementation
 - **Loading Screen** - Elegant preloader with progress indicator
 - **Scroll Progress** - Visual scroll position indicator
@@ -59,6 +63,7 @@ An ultra-premium, production-ready, single-page personal portfolio website built
 - **Navigation Menu** - Full-screen animated menu
 
 ### 🔍 SEO & Performance
+
 - **Perfect SEO** - Meta tags, Open Graph, Twitter Cards
 - **Structured Data** - Schema.org markup for rich results
 - **Sitemap & Robots.txt** - Search engine optimization
@@ -67,6 +72,7 @@ An ultra-premium, production-ready, single-page personal portfolio website built
 - **Lighthouse 95+** - Performance, Accessibility, SEO scores
 
 ### ♿ Accessibility
+
 - **WCAG Compliant** - AA accessibility standards
 - **Keyboard Navigation** - Full keyboard support
 - **ARIA Labels** - Screen reader friendly
@@ -76,17 +82,20 @@ An ultra-premium, production-ready, single-page personal portfolio website built
 ## 🛠️ Tech Stack
 
 ### Core
+
 - **React 18** - Latest React with concurrent features
 - **TypeScript** - Type-safe development
 - **Vite** - Lightning-fast build tool
 - **Tailwind CSS** - Utility-first styling
 
 ### Animation & Motion
+
 - **Framer Motion** - Production-ready animations
 - **GSAP** - Professional-grade animation library
 - **Lenis** - Smooth scroll implementation
 
 ### Additional Libraries
+
 - **React Helmet Async** - SEO meta tag management
 - **React Photo View** - Lightbox gallery
 - **EmailJS** - Contact form integration
@@ -159,6 +168,7 @@ src/
 ### 1. Update Personal Information
 
 Edit `src/components/SEO.tsx`:
+
 ```typescript
 const structuredData = {
   name: 'Studio Name',
@@ -184,6 +194,7 @@ The app reads these variables at runtime and falls back to a demo send when not 
 ### 3. Update Colors
 
 Edit `src/styles/globals.css`:
+
 ```css
 :root {
   --background: #f5f5f5;
@@ -195,14 +206,15 @@ Edit `src/styles/globals.css`:
 ### 4. Add Projects
 
 Edit `src/sections/Gallery.tsx`:
+
 ```typescript
 const projects = [
   {
     id: 1,
-    title: "Your Project",
-    category: "Category",
-    image: "image-url",
-    size: "large" // or "medium"
+    title: 'Your Project',
+    category: 'Category',
+    image: 'image-url',
+    size: 'large', // or "medium"
   },
   // ... add more projects
 ];
@@ -211,6 +223,7 @@ const projects = [
 ### 5. Update Statistics
 
 Edit `src/components/Statistics.tsx`:
+
 ```typescript
 const stats = [
   { value: 150, suffix: '+', label: 'Projects Completed' },
@@ -245,6 +258,7 @@ dist
 ### Other Platforms
 
 The site is a static build and can be deployed to any static hosting service:
+
 - GitHub Pages
 - Cloudflare Pages
 - AWS S3 + CloudFront
@@ -253,6 +267,7 @@ The site is a static build and can be deployed to any static hosting service:
 ## 📊 Performance
 
 Target Lighthouse Scores:
+
 - ✅ Performance: 95+
 - ✅ Accessibility: 95+
 - ✅ Best Practices: 95+

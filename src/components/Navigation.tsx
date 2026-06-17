@@ -29,11 +29,14 @@ export const Navigation = () => {
       <header
         className={cn(
           'fixed top-0 left-0 w-full z-50 transition-all duration-300 ease-in-out',
-          scrolled ? 'py-4 glass' : 'py-8 bg-transparent'
+          scrolled ? 'py-4 glass' : 'py-8 bg-transparent',
         )}
       >
         <div className="container mx-auto px-6 md:px-12 flex justify-between items-center">
-          <a href="#home" className="text-2xl font-display font-bold tracking-tighter z-50 relative hover-target text-primary">
+          <a
+            href="#home"
+            className="text-2xl font-display font-bold tracking-tighter z-50 relative hover-target text-primary"
+          >
             STUDIO<span className="text-accent">.</span>
           </a>
 
