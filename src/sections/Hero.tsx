@@ -38,13 +38,11 @@ export const Hero = () => {
   useEffect(() => {
     // preload a few key images used in the gallery to reduce perceived load
     const imgs = projects.slice(0, 3).map((p) => p.image);
-    let mounted = true;
     (async () => {
       try {
         await Promise.race([preloadImages(imgs), new Promise((r) => setTimeout(r, 500))]);
       } catch {}
       // no state to set here; this is a best-effort preload
-      return () => { mounted = false; };
     })();
   }, []);
 

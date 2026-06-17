@@ -89,17 +89,15 @@ export const Gallery = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    let mounted = true;
     const imgs = projects.map((p) => p.image);
     const doPreload = async () => {
       try {
         // race preload with a short timeout to avoid long blocking
         await Promise.race([preloadImages(imgs), new Promise((r) => setTimeout(r, 800))]);
       } catch {}
-      if (mounted) setLoading(false);
+      setLoading(false);
     };
     doPreload();
-    return () => { mounted = false; };
   }, []);
   
   return (
