@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syncopate:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html.lenis {
+    height: auto;
+  }
+  
+  .lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+  }
+  
+  .lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+  }
+  
+  .lenis.lenis-stopped {
+    overflow: hidden;
+  }
+  
+  .lenis.lenis-scrolling iframe {
+    pointer-events: none;
+  }
+
+  :root {
+    --background: #f5f5f5;
+    --surface: #ffffff;
+    --primary: #0a0a0a;
+    --secondary: #666666;
+    --accent: #2563eb;
+  }
+
+  .dark {
+    --background: #0a0a0a;
+    --surface: #121212;
+    --primary: #ffffff;
+    --secondary: #a1a1aa;
+    --accent: #3b82f6;
+  }
+
+  body {
+    @apply bg-background text-primary antialiased overflow-x-hidden selection:bg-accent selection:text-white transition-colors duration-500;
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  }
+
+  /* Switch to premium fonts once loaded to avoid FOIT */
+  .fonts-loaded body {
+    font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  }
+
+  h1, h2, h3, h4, h5, .font-display {
+    font-family: 'Syncopate', 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  }
+}
+
+@layer components {
+  .glass {
+    background-color: color-mix(in srgb, var(--surface) 5%, transparent);
+    backdrop-filter: blur(12px);
+    border: 1px solid color-mix(in srgb, var(--primary) 10%, transparent);
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary via-primary/80 to-primary/40;
+  }
+}
