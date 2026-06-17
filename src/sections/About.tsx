@@ -76,7 +76,7 @@ export const About = () => {
           <div className="lg:col-span-8">
             <h2 className="text-sm font-semibold tracking-[0.3em] uppercase text-accent mb-8">The Studio</h2>
             <p ref={textRef} className="text-3xl md:text-5xl font-light leading-snug md:leading-tight text-primary/20">
-              We blend architectural precision with artistic vision to create physical spaces that don't just exist—they inspire, comfort, and endure. We design for the way you live.
+              We blend architectural precision with artistic vision to create physical spaces that don&apos;t just exist—they inspire, comfort, and endure. We design for the way you live.
             </p>
             
             <div className="mt-20">

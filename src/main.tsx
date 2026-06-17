@@ -19,10 +19,11 @@ preloadImages(criticalImages).catch(() => {});
 if (typeof document !== 'undefined' && 'fonts' in document) {
   try {
     // `document.fonts.ready` resolves when fonts declared via @import or @font-face are loaded
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     (document as any).fonts.ready.then(() => {
       document.documentElement.classList.add('fonts-loaded');
     }).catch(() => {});
-  } catch (e) {
+  } catch {
     // ignore
   }
 }

@@ -41,7 +41,9 @@ export const Hero = () => {
     (async () => {
       try {
         await Promise.race([preloadImages(imgs), new Promise((r) => setTimeout(r, 500))]);
-      } catch {}
+      } catch {
+        // ignore preload errors
+      }
       // no state to set here; this is a best-effort preload
     })();
   }, []);

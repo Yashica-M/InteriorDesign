@@ -26,10 +26,11 @@ export const Contact = () => {
         formRef.current.reset();
       } else {
         // Production error handling
+        // eslint-disable-next-line no-console
         console.error('EmailJS keys are missing. Please configure your .env file.');
         setStatus('error');
       }
-    } catch (error) {
+    } catch {
       setStatus('error');
     } finally {
       setIsSubmitting(false);
@@ -49,10 +50,10 @@ export const Contact = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
           <div>
             <h2 className="text-4xl md:text-7xl font-display font-bold tracking-tighter mb-8">
-              LET'S DESIGN<br />SOMETHING<br />EXTRAORDINARY.
+              LET&apos;S DESIGN<br />SOMETHING<br />EXTRAORDINARY.
             </h2>
             <p className="text-secondary text-lg max-w-md mb-12">
-              Currently accepting new projects. Let's discuss your next big idea and bring it to life with precision and style.
+              Currently accepting new projects. Let&apos;s discuss your next big idea and bring it to life with precision and style.
             </p>
             
             <div className="flex flex-col space-y-6">

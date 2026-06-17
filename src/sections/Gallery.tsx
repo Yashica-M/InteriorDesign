@@ -94,7 +94,9 @@ export const Gallery = () => {
       try {
         // race preload with a short timeout to avoid long blocking
         await Promise.race([preloadImages(imgs), new Promise((r) => setTimeout(r, 800))]);
-      } catch {}
+      } catch {
+        // ignore preload errors
+      }
       setLoading(false);
     };
     doPreload();
